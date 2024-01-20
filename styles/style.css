@@ -116,3 +116,45 @@ h1 span:nth-child(18){
 h1 span:nth-child(19){
     animation-delay: 11s;
 }
+@media screen and (max-width:576px) {
+    body{
+        background-color: #000;
+    }
+    .video{
+        position: absolute;
+        margin-top: 260px;
+        width: 100%;
+    }
+    .tuli{
+        height:80vh;
+    }
+    
+    h1{
+        margin:0;
+        padding: 0;
+        position:relative;
+        transform:translateY(-50%);
+        text-align: center;
+        color: #ddd;
+        font-size: 20px;
+        font-family: sans-serif;
+        letter-spacing: 0.1rem;
+    }
+    h1 span{
+        opacity: 0;
+        display: inline-block;
+        animation:animate 1s linear forwards;
+    }
+    @keyframes animate{
+        0%{
+            opacity: 0;
+            transform: rotateY(90deg);
+            filter: blur(10px);
+        }
+        100%{
+            opacity: 1;
+            transform: rotateY(0deg);
+            filter: blur(0px);
+        }
+    }
+}
